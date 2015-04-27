@@ -162,7 +162,10 @@ function Rundiv(container, options) {
   }
 
   function handleNav(page,to){
-
+    if (length == 2) {
+      page = page % 2;
+      to = to % 2;
+    }
     options.listelem.children[page].className = "";
     options.listelem.children[to].className = "active";
 
